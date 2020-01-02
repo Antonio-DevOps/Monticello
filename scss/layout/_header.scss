@@ -1,0 +1,106 @@
+/* HEADER LAYOUT */
+
+.header {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+
+
+    &::before,
+    &__background-container {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+
+    }
+
+    &__background-container {
+        overflow: hidden;
+    }
+
+    &__background {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: 70%;
+
+        &--slide1 {
+            background-image: url(../img/slide-bg.jpg);
+        }
+
+        &--slide2 {
+            background-image: url(../img/slide-bg2.jpg);
+        }
+        &--slide3 {
+            background-image: url(../img/slide-bg3.jpg);
+        }
+        &--slide4 {
+            background-image: url(../img/slide-bg4.jpg);
+        }
+        &--slide5 {
+            background-image: url(../img/slide-bg5.jpg);
+        }
+        &--slide6 {
+            background-image: url(../img/slide-bg6.jpg);
+        }
+    }
+
+    &--blue::before {
+        background-color: $color-blue;
+    }
+
+    &__center {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 80rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__small-title {
+        position: absolute;
+        top: 55%;
+        left: 67%;
+        font-size: 1em;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 100%;
+        font-weight: 300;
+        color: #fff;
+
+    }
+
+    &__big-title {
+        font-family: 'gothambold1', sans-serif;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        font-size: 8rem;
+    }
+
+    &__scroll {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        padding: 5px;
+        border-radius: 50%;
+        border: 1px solid #ffffff;
+    }
+
+}
